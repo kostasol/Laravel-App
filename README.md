@@ -41,38 +41,40 @@ This application serves as a comprehensive client payment tracking system, allow
 ```bash
 git clone [repository-url]
 cd client-payments
+```
 
 2.Install PHP dependencies:
-
+```
 composer install
-
+```
 3.Install and compile frontend dependencies:
-
+```
 npm install
 npm run dev
-
+```
 4.Configure environment:
-
+```
 cp .env.example .env
 php artisan key:generate
-
+```
 5.Configure database:
 
 The project uses SQLite by default
 
 Create the database file:
-
+```
 touch database/database.sqlite
-
+```
 6.Run migrations and seed the database:
-
+```
 php artisan migrate:fresh --seed
-
+```
 
 Usage
+
 After installation, you can:
 
-Register a new user account
+Register a new user account (/register)
 Log in to access the dashboard
 View the client list with their latest payments
 Add, edit, or remove clients
