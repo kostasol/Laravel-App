@@ -70,60 +70,73 @@ touch database/database.sqlite
 php artisan migrate:fresh --seed
 ```
 
-Usage
+<h2>Usage</h2>
 
 After installation, you can:
 
-Register a new user account (/register)
-Log in to access the dashboard
-View the client list with their latest payments
-Add, edit, or remove clients
-Record new payments
-Filter payments by date range
+<ul>
+<li>Register a new user account (/register)</li>
+<li>Log in to access the dashboard</li>
+<li>View the client list with their latest payments</li>
+<li>Add, edit, or remove clients</li>
+<li>Record new payments</li>
+<li>Filter payments by date range</li>
+</ul>
 
-Project Structure
+<h2>Project Structure</h2>
+
 The application follows Laravel's standard MVC architecture with some additional organizational patterns:
 
-app/Http/Controllers - Contains ClientController, PaymentController, and DashboardController
-app/Models - Contains Client and Payment models with their relationships
-app/Services - Contains the ClientDataTable service for handling DataTables functionality
-resources/views - Contains Blade templates organized by feature
-routes/web.php - Contains all web routes with proper middleware and rate limiting
+<ul>
+<li>app/Http/Controllers - Contains ClientController, PaymentController, and DashboardController</li>
+<li>app/Models - Contains Client and Payment models with their relationships</li>
+<li>app/Services - Contains the ClientDataTable service for handling DataTables functionality</li>
+<li>resources/views - Contains Blade templates organized by feature</li>
+<li>routes/web.php - Contains all web routes with proper middleware and rate limiting</li>
+</ul>
 
-Database Design
+<h2>Database Design</h2>
+
 The database consists of two main tables:
 
-clients
+<h4>clients</h4>
 
-id (primary key)
-name
-surname
-timestamps
-
-
-payments
-
-id (primary key)
-client_id (foreign key)
-amount
-timestamps
+<ul>
+<li>id (primary key)</li>
+<li>name</li>
+<li>surname</li>
+<li>timestamps</li>
+</ul>
 
 
+<h4>payments</h4>
+<ul>
+<li>id (primary key)</li>
+<li>client_id (foreign key)</li>
+<li>amount</li>
+<li>timestamps</li>
+</ul>
 
-Security Features
 
-User Authentication (Laravel Breeze)
-CSRF Protection
-Rate Limiting on Routes
-Input Validation
-SQL Injection Prevention (through Laravel's Query Builder and Eloquent)
+<h2>Security Features</h2>
+    
+<ul>
+<li>User Authentication (Laravel Breeze)</li>
+<li>CSRF Protection</li>
+<li>Rate Limiting on Routes</li>
+<li>Input Validation</li>
+<li>SQL Injection Prevention (through Laravel's Query Builder and Eloquent)</li>
+</ul>
+    
+<h2>Performance Optimizations</h2>
 
-Performance Optimizations
+<ul>
+<li>Database Indexing</li>
+<li>Eager Loading of Relationships</li>
+<li>Query Optimization for DataTables</li>
+<li>Proper Rate Limiting Configuration</li>
+<ul>
 
-Database Indexing
-Eager Loading of Relationships
-Query Optimization for DataTables
-Proper Rate Limiting Configuration
 
 
 
