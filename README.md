@@ -39,8 +39,8 @@ This application serves as a comprehensive client payment tracking system, allow
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
-cd client-payments
+git clone https://github.com/kostasol/Laravel-App.git
+cd Laravel-App
 ```
 
 2.Install PHP dependencies:
